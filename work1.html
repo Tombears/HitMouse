@@ -6,144 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-        
-        .main {
-            margin: 20px auto;
-            width: 500px;
-            height: 560px;
-            border: 1px solid #2d2d2d;
-            position: relative;
-        }
-        
-        .content {
-            margin: auto;
-            width: 452px;
-            height: 452px;
-            border: 1px solid #2d2d2d;
-        }
-        
-        .content>div {
-            width: 84px;
-            height: 84px;
-            border: 1px solid #2d2d2d;
-            margin: 2px;
-            float: left;
-            background: red url("IMG/diglett00.jpg") no-repeat center;
-            background-size: cover;
-        }
-        
-        .scoreboard {
-            width: 270px;
-            height: 70px;
-            border: 1px solid #2d2d2d;
-            position: absolute;
-            bottom: 20px;
-            left: 116px;
-        }
-        
-        .start,
-        .end {
-            width: 40px;
-            height: 20px;
-            position: absolute;
-            bottom: 10px;
-            left: 90px;
-        }
-        
-        .end {
-            left: 140px;
-        }
-        
-        .scoreboard p {
-            font-weight: bold;
-            font-size: 10px;
-            text-align: center;
-        }
-        
-        .scoreboard p span {
-            color: rgb(64, 179, 255);
-        }
-    </style>
+    <style> </style>
+    <script src="JS/First.js"></script>
+    <link rel="stylesheet" href="CSS/First.css">
 </head>
 
 <body>
-    <div class="main">
-        <div class="content">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+    <div id="wrap">
+        <div class="main">
+            <div class="content">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="scoreboard">
+                <p>计时：<span id="time">0 </span>秒</p>
+                <p>计分：<span id="score">0 </span>分</p>
+                <input class="start" id="start" type="button" value="开始" />
+                <input class="end" id="end" type="button" value="结束" />
+            </div>
         </div>
-        <div class="scoreboard">
-            <p>计时：<span>0 </span>秒</p>
-            <p>计分：<span>0 </span>分</p>
-            <input class="start" id="start" type="button" value="开始" />
-            <input class="end" type="button" value="结束" />
+    </div>
+    <div id="popUp">
+        游戏结束，您的得分是<span id=upScore"">0 </span>，耗时<span id="upTime">0 </span>秒
+        <div id="close">
+            <img src="IMG/close.png" alt="">
         </div>
     </div>
 </body>
-<script>
-    var child = document.getElementsByClassName("content")[0].children;
-    // 添加开始游戏后老鼠出现事件
-    // 1111
-
-    document.getElementById("start").onclick = function() {
-        setInterval(function() {
-            var mouseNum = Math.floor(Math.random() * 25);
-            child[mouseNum].setAttribute(
-                "style",
-                "background:url(IMG/diglett01.jpg) no-repeat center;background-size: cover;"
-            );
-            // 老鼠出现后消失
-            setTimeout(function() {
-                child[mouseNum].setAttribute(
-                    "style",
-                    "background:url(IMG/diglett00.jpg) no-repeat center;background-size: cover;"
-                );
-            }, 1500);
-        }, 1000);
-    };
-    // 添加点击老鼠后改变老鼠状态
-    for (let index = 0; index < child.length; index++) {
-        child[index].onclick = function() {
-            child[index].setAttribute(
-                "style",
-                "background:url(IMG/diglett02.jpg) no-repeat center;background-size: cover;"
-            );
-            setTimeout(function() {
-                child[index].setAttribute(
-                    "style",
-                    "background:url(IMG/diglett00.jpg) no-repeat center;background-size: cover;"
-                );
-            }, 800);
-        };
-    }
-</script>
 
 </html>

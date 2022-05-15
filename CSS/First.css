@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#wrap {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background: rgba(8, 198, 228, 0.2);
+}
+
+.main {
+    margin: 20px auto;
+    width: 500px;
+    height: 560px;
+    border: 1px solid #2d2d2d;
+    position: absolute;
+    left: 500px;
+}
+
+.content {
+    margin: auto;
+    width: 452px;
+    height: 452px;
+    border: 1px solid #2d2d2d;
+}
+
+.content>div {
+    width: 84px;
+    height: 84px;
+    border: 1px solid #2d2d2d;
+    margin: 2px;
+    float: left;
+    background: red url('../IMG/diglett00.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.scoreboard {
+    width: 270px;
+    height: 70px;
+    border: 1px solid #2d2d2d;
+    position: absolute;
+    bottom: 20px;
+    left: 116px;
+}
+
+.start,
+.end {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 90px;
+}
+
+.end {
+    left: 140px;
+}
+
+.scoreboard p {
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+}
+
+.scoreboard p span {
+    color: rgb(64, 179, 255);
+}
+
+#popUp {
+    display: none;
+    width: 600px;
+    height: 70px;
+    background-color: rgba(9, 230, 255, 0.7);
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    text-align: center;
+    font-size: 30px;
+    padding: 130px;
+}
+
+#popUp span {
+    color: rgb(70, 70, 198);
+}
+
+#close {
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    text-indent: -141px;
+    background-size: cover;
+}
+
+#close img {
+    filter: drop-shadow(70px 70px yellow);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -65px;
+    right: 74px;
+}
